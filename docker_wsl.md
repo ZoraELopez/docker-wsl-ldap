@@ -44,7 +44,7 @@ services:
       - "8080:80"
     depends_on:
       - ldap
-
+```
 # Dockerfile
 ```dockerfile
 FROM php:8.2-apache
@@ -57,7 +57,7 @@ RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
 RUN docker-php-ext-install ldap
 
 COPY . /var/www/html/
-
+```
 # Explicación de Redes Docker
 
 Docker Compose crea automáticamente una red interna para permitir comunicación
