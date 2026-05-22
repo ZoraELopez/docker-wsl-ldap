@@ -44,7 +44,9 @@ services:
       - "8080:80"
     depends_on:
       - ldap
+
 # Dockerfile
+```yaml
 FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y \
@@ -57,7 +59,7 @@ RUN docker-php-ext-install ldap
 COPY . /var/www/html/
 
 #Explicación de Redes Docker
-
+```yaml
 Docker Compose crea automáticamente una red interna para permitir comunicación
 entre contenedores.
 
@@ -66,6 +68,7 @@ ldap_connect("ldap://ldap");
 No se utiliza localhost porque cada contenedor tiene su propia red aislada.
 
 #Ventajas frente al entorno local
+```yaml
 Servicios aislados
 Mejor organización
 Arquitectura moderna
@@ -74,12 +77,13 @@ Menos conflictos
 Cercano a producción
 
 #Evidencias
+```yaml
 docker ps funcionando
 Login LDAP funcionando
 Logs Docker funcionando
 Contenedores activos
 
 #Conclusión
-
+```yaml
 Se implementó exitosamente una arquitectura moderna utilizando Docker Desktop,
 WSL, LDAP y contenedores Docker para autenticación web.
