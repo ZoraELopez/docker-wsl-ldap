@@ -83,7 +83,7 @@ Login LDAP funcionando
 Logs Docker funcionando
 Contenedores activos
 
-#Conclusión
+# Conclusión
 
 Se implementó exitosamente una arquitectura moderna utilizando Docker Desktop,
 WSL, LDAP y contenedores Docker para autenticación web.
